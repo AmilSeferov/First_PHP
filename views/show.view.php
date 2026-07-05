@@ -107,6 +107,8 @@
                 <?php if($_SESSION['user_id']==$comment['user_id']){ ?>
                 <a style="display: inline-block; width:10% ; text-align: center;" href="?page=delete_raiting&id=<?php echo $comment['id']; ?>&blog_id=<?php echo $blog['id']; ?>" class="btn btn-delete"
                     onclick="return confirm('Bu rəyi silmək istədiyinizdən əminsiniz?')">Sil</a>
+                <a style="  text-align: center;" href="?page=edit_raiting&id=<?php echo $comment['id']; ?>&blog_id=<?php echo $blog['id']; ?>" class="btn btn-edit"
+                   >Redaktə et</a>
                 <?php } ?>
             </div>
             <?php endforeach; ?>

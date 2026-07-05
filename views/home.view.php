@@ -17,7 +17,7 @@
                 </h3>
                 <div class="blog-rating">
                     <?php if ($blog['total_count'] > 0): ?>
-                        <span class="stars"><?php echo str_repeat('⭐', $blog['total_rating'] / $blog['total_count']); ?><?php echo str_repeat('☆', 5 - ($blog['total_rating'] / $blog['total_count'])); ?></span>
+                        <span class="stars"><?php echo str_repeat('⭐', floor($blog['total_rating'] / $blog['total_count'])); ?><?php echo str_repeat('☆', 5 - floor($blog['total_rating'] / $blog['total_count'])); ?></span>
                         <span class="rating-score">(<?php echo round($blog['total_rating'] / $blog['total_count'], 1); ?>)</span>
                     <?php else: ?>
                         <span class="stars">Henüz qiymətləndirilməyib</span>

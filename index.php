@@ -48,6 +48,10 @@ switch ($route){
         case 'delete_raiting':
         require_once 'actions/delete_raiting.action.php';
         break;
+        case 'edit_raiting':
+        require_once 'actions/edit_raiting.action.php';
+        include 'views/edit_raiting.view.php';
+        break;
     case 'dashboard':
         if (!isset($_SESSION['user_id'])) {
             header("Location: index.php?page=login");

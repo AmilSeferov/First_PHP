@@ -41,10 +41,8 @@
                         <span class="badge badge-admin"><?php echo $user['role_name']??''; ?></span>
                     </td>
                     <td>
-                        <form action="?page=change_role" method="POST" class="role-form">
-                            <!-- İstifadəçi ID-si -->
+                        <form action="?page=change_role" method="POST" class="role-form"> 
                             <input type="hidden" name="user_id" value="<?php echo $user['id']; ?>">
-                            <!-- Rol seçimi dəyişəndə avtomatik form göndəriləcək -->
                             <select class="role-select" name="role_id" onchange="this.form.submit()">
                                 <?php foreach($all_roles as $role): ?>
                                     <option value="<?php echo $role['id']; ?>" <?php echo ($role['id'] == $user['role_id']) ? 'selected' : ''; ?>>
@@ -70,7 +68,6 @@
     </div>
 </div>
 
-<!-- Backend axtarış istifadə olunur -->
 
 <?php require_once 'includes/footer.php'; ?>
 <style>

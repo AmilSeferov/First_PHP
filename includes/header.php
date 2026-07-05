@@ -12,7 +12,7 @@
 
 <header>
     <nav>
-        <a href="?page=home">🏠 Ana Səhifə</a> | 
+        <a href="?page=home" style=" color:<?php if($_GET['page']==='home'){echo "green";}else{echo "black";}?>">🏠 Ana Səhifə</a> | 
         
         <?php if (isset($_SESSION['user_id'])): ?>
            
@@ -32,9 +32,6 @@
 <hr>
 <style>
 
-    /* ==========================================================================
-   Mərkəzi Reset və Qlobal Stillər (Əgər CSS faylında yoxdursa)
-   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
