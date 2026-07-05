@@ -1,0 +1,6 @@
+RewriteEngine On
+
+# Əgər çağırılan link real fayl və ya qovluq deyilsə, hər şeyi index.php-yə yönləndir
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?route=$1 [QSA,L]
