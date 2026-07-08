@@ -16,8 +16,7 @@ if($user){
    $_SESSION['email']=$user['email'];
    $_SESSION['role_name']=$user['role_name'];
    $_SESSION['is_logged_in']=true;
-   header("Location: index.php?page=home");
-   exit();
+ redirect("home");
    }else{
     $message='Şifrə yalnışdır';
    }

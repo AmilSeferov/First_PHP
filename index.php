@@ -2,11 +2,11 @@
 session_start();
 
 $route=$_GET['page']??'Home';
+require_once 'config/helper.php';
 
 switch ($route){
     case'home':
         require_once 'actions/home.action.php';
-        require_once 'actions/delete.action.php';
         include 'views/home.view.php';
         break;
          case'show':
@@ -32,6 +32,13 @@ switch ($route){
         require_once 'actions/register.action.php';
         include 'views/register.view.php';
         break;
+
+    case'dashboard':
+        require_once 'actions/delete.action.php';
+        require_once 'actions/dashboard.action.php';
+        include 'views/dashboard.view.php';
+        break;
+
     case'admin_users':
         require_once 'actions/admin/users.action.php';
         include 'views/admin/users.view.php';

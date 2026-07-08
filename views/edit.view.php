@@ -4,7 +4,7 @@
     
     <div class="form-header">
         <h2>Bloq Yazısını Redaktə Et</h2>
-        <a href="?page=home" class="btn btn-secondary">← Ləğv Et və Qayıt</a>
+        <a href=" <?php echo $_SERVER['HTTP_REFERER'] ?? '?page=home'; ?>" class="btn btn-back">← Geri Qayıt</a>
     </div>
 
     <form action="actions/edit.action.php?id=<?php echo $blog['id'] ?? ''; ?>" method="POST" class="blog-form">

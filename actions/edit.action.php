@@ -10,7 +10,7 @@ if(isset($_GET['id']) && $_SERVER['REQUEST_METHOD'] == 'POST'){
         'content' => $_POST['content'],
         'id'      => $_GET['id']
     ]);
-    header('Location:../?page=home');
+    header('Location:../?page=dashboard');
     exit();
 
 } elseif(isset($_GET['id'])) {

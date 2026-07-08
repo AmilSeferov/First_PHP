@@ -13,14 +13,11 @@
 <header>
     <nav>
         <a href="?page=home" style=" color:<?php if($_GET['page']==='home'){echo "green";}else{echo "black";}?>">🏠 Ana Səhifə</a> | 
-        
         <?php if (isset($_SESSION['user_id'])): ?>
-           
-            
             <?php if (($_SESSION['role_name'] ?? $_SESSION['role'] ?? '') === 'admin'): ?>
                 <a href="?page=admin_users">👥 İstifadəçilər (Admin)</a> | 
-                
             <?php endif; ?>
+                <a href="?page=dashboard">👥Admin Panel</a> | 
             <strong>Sifarişçi: <?php echo htmlspecialchars($_SESSION['name'] ?? ''); ?> (<?php echo htmlspecialchars($_SESSION['role_name'] ?? ''); ?>)</strong> |
             <a href="?page=logout" style="color: red;">❌ Çıxış</a>
         <?php else: ?>

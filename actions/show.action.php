@@ -6,9 +6,7 @@ if(isset($_GET['id'])){
     $stmt->execute(['id'=>$_GET['id']]);
     $blog=$stmt->fetch(PDO::FETCH_ASSOC);
     if(empty($blog)){
-        echo "Bloq tapılmadı!";
-        header("Location:?page=home");
-        exit();
+      redirect('home','Bloq tapılmadı!');
     }
     $comments= $pdo->prepare("SELECT c.*,u.name FROM ratings c LEFT JOIN users u ON c.user_id=u.id WHERE c.blog_id=:blog_id");
     $comments->execute(['blog_id'=>$_GET['id']]);
@@ -21,7 +19,7 @@ if(isset($_GET['id'])){
         $has_rated = $check_rating->fetchColumn() > 0;
     }
 }else{
-    echo"Hatalı giriş!";
-    header("Location:../?page=home");
+    $referer = $_SERVER['HTTP_REFERER'] ?? '?page=home';
+    header("Location: $referer");
     exit();
 }

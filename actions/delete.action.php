@@ -12,7 +12,7 @@ if (isset($_GET['id']) && $user_id) {
     }
     $stms=$pdo->prepare('DELETE FROM blogs where id=:id and user_id=:user_id');
     $stms->execute(['id'=>$_GET['id'], 'user_id'=>$user_id]);
-    header('Location: index.php?page=home');
+    header('Location: ?page=dashboard');
     exit();
 
 

@@ -10,8 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     "email"=>$email,
     "password"=>$password
    ]);
-   header("Location: index.php?page=login");
-   exit();
+  redirect('login','Qeydiyyatdan keçdiniz');
     
 }
 ?>

@@ -13,6 +13,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     ]);
 
 
-    header("Location: index.php?page=home");
+    header("Location: ?page=dashboard");
     exit;
 }

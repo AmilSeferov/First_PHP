@@ -3,17 +3,9 @@
 <section class="show-container">
 
     <div class="show-header">
-        <a href="?page=home" class="btn btn-back">← Geri Qayıt</a>
+        <a href=" <?php echo $_SERVER['HTTP_REFERER'] ?? '?page=home'; ?>" class="btn btn-back">← Geri Qayıt</a>
         <div class="show-header-actions">
-            <?php 
-            if($blog['user_id'] == $_SESSION['user_id'] || $_SESSION['role_name'] == 'admin'){
-                ?>
-            <a href="?page=edit&id=<?php echo $blog['id'] ?? ''; ?>" class="btn btn-edit">Redaktə et</a>
-            <a href="?page=delete&id=<?php echo $blog['id'] ?? ''; ?>" class="btn btn-delete"
-               onclick="return confirm('Bu bloqu silmək istədiyinizdən əminsiniz?')">Sil</a>
-              <?php }
-            
-            ?>
+          
         </div>
     </div>
 

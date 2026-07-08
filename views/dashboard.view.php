@@ -2,8 +2,8 @@
 <section class="blog-container">
     
     <div class="blog-header">
-        <h2>Son Bloq Yazıları</h2>
-        <!-- <a href="?page=create" class="btn btn-primary">+ Yeni Bloq Əlavə Et</a> -->
+        <h2>Mənim Bloq Yazılarım</h2>
+        <a href="?page=create" class="btn btn-primary">+ Yeni Bloq Əlavə Et</a>
     </div>
 
     <div class="blog-grid">
@@ -27,10 +27,10 @@
             </div>
             <div class="blog-actions">
                 <a href="?page=show&id=<?php echo $blog['id'] ?? ''; ?>" class="btn btn-primary" style="margin-right: auto;">Ətraflı oxu</a>
-                <!-- <?php if ($blog['user_id'] == $_SESSION['user_id']): ?>
+                <?php if ($blog['user_id'] == $_SESSION['user_id']): ?>
                     <a href="?page=edit&id=<?php echo $blog['id'] ?? ''; ?>" class="btn btn-edit">Redaktə et</a>
                     <a href="?page=delete&id=<?php echo $blog['id'] ?? ''; ?>" class="btn btn-delete" onclick="return confirm('Bu bloqu silmək istədiyinizdən əminsiniz?')">Sil</a>
-                <?php endif; ?> -->
+                <?php endif; ?>
             </div>
         </div>
     <?php endforeach; ?>
